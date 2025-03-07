@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Button = ({ children, style, link }) => {
+const Button = ({ children, style, link, onclick = () => {} }) => {
   return (
     <Link to={link}>
-      <button className={`px-5 py-2  ${style} cursor-pointer`}>
+      <button className={` btn   ${style} cursor-pointer `} onClick={onclick}>
         {children}
       </button>
     </Link>
